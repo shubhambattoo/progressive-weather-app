@@ -1,0 +1,168 @@
+.glass {
+  --blur: 20px;
+  min-width: 400px;
+  background-size: calc(100% + calc(var(--blur) * 4));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: absolute;
+  left: calc(var(--blur) * -2);
+  right: calc(var(--blur) * -2);
+  top: calc(var(--blur) * -2);
+  bottom: calc(var(--blur) * -2);
+  filter: blur(var(--blur));
+}
+
+.glass-contents {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 4rem 2rem;
+  overflow: auto;
+}
+
+.glass-contents.night {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.glass-contents::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.header {
+  color: #eee;
+  padding: 2rem 0;
+}
+
+.close {
+  height: 40px;
+  position: absolute;
+  right: 0;
+  width: 50px;
+  top: 0;
+  border-radius: 4px;
+  margin: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all .2s ease-in;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0 0;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.close:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #333;
+}
+
+
+.searchbox {
+  margin: 20px 0;
+}
+
+.searchbox input {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  padding: 1rem 0;
+  color: #fff;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.locations {
+  padding: 0;
+}
+
+.locations .place {
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all .2s ease-in;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.locations .place.nohov {
+  cursor: default;
+}
+
+.searching {
+  padding: 0;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all .2s ease-in;
+  border-radius: 4px;
+  line-height: 1;
+  cursor: default;
+}
+
+.locations .place.big {
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: .5rem;
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  align-items: center;
+}
+
+.locations .place.big:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.locations .place.big .w {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.locations .place.big .w .temp {
+  font-size: 24px;
+}
+
+.locations .place.big .w .icon {
+  font-size: 24px;
+}
+
+.place.big .place-info p {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #eee;
+}
+
+.place.big .place-info span {
+  display: block;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.locations .place:not(.nohov):hover {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.locations .noplace {
+  padding: .5rem 0;
+  color: rgba(255, 255, 255, 0.5);
+}
