@@ -1,10 +1,10 @@
-# Progressive Weather Application
+# Weather Reacts
 
-A very basic example PWA built with ReactJS and Open Weather API, to fetch weather of a particular city.
+A progressive weather application, built with ReactJS and [Open Weather API](http://openweathermap.org/), to get current weather condition of any particular city. Get weather updates , temparature, humidity, UV index, probability of percipitation, sunrise or sunset timings, 7 days forecast and more.
 
 ## [Live Preview](https://weather-reacts.netlify.app)
 
-![](./screenshots/weather.png)
+![](./screenshots/screenshot-new.png)
 
 ## Development
 
