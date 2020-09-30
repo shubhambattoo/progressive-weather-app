@@ -1,15 +1,19 @@
 {
     "short_name": "Weather App",
     "name": "React Weather App",
-    "icons": [
-        {
-            "src": "/images/logo.png",
+    "icons": [{
+            "src": "logo192.png",
             "type": "image/png",
-            "sizes": "1024x1024"
+            "sizes": "192x192"
+        },
+        {
+            "src": "logo512.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ],
     "start_url": ".",
     "display": "standalone",
-    "theme_color": "#010312",
+    "theme_color": "#2d313a",
     "background_color": "#ffffff"
 }
