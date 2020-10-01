@@ -1,0 +1,437 @@
+.scroll-wrapper {
+  max-width: calc(100vw - 8rem);
+  min-height: 150px;
+  display: flex;
+  overflow: auto;
+  padding-bottom: 1rem;
+  margin: 0 -4px;
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-wrapper {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.current-place {
+  color: rgba(255, 255, 255, 0.65);
+  transition: all 0.3s ease-out;
+}
+
+.current-place .highlight {
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  margin-top: 20vh;
+  position: relative;
+}
+
+.current-place .highlight .location {
+  color: rgba(255, 255, 255, 0.65);
+  position: absolute;
+  padding-left: 32px;
+  top: 0;
+}
+
+.current-place .highlight .location::before {
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: url('../assets/icons/pin.png') no-repeat center;
+  background-size: 18px;
+  margin-top: -10px;
+  left: 0;
+}
+
+.current-place .highlight .temp {
+  font-size: 150px;
+  margin-top: 40px;
+  margin-right: 40px;
+  margin-left: -10px;
+}
+
+@media screen and (max-width:600px) {
+  .current-place .highlight .temp {
+    margin-left: 0;
+    margin: 60px 0 0;
+  }
+}
+
+.current-place .highlight .temp sup {
+  font-size: 50px;
+  opacity: 0.5;
+}
+
+.current-place .highlight .icon.inv {
+  filter: invert(100%);
+}
+
+.current-place .more-info {
+  display: flex;
+}
+
+.current-place .more-info .description {
+  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.current-place .more-info .description span+span::before {
+  content: ', ';
+}
+
+.current-place .more-info .humid,
+.current-place .more-info .wind,
+.current-place .more-info .temp {
+  position: relative;
+  line-height: 16px;
+  padding: 12px 0 12px 36px;
+  font-size: 16px;
+  margin-left: 40px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.current-place .more-info .humid::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -18px;
+  background: url('../assets/icons/drop.png') no-repeat center;
+  background-size: 24px;
+  width: 30px;
+  height: 30px;
+}
+
+.current-place .more-info .wind::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -16px;
+  background: url('../assets/icons/wind.png') no-repeat center;
+  background-size: 24px;
+  width: 30px;
+  height: 30px;
+}
+
+.current-place .more-info .temp::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  margin-top: -16px;
+  background: url('../assets/icons/temperature.png') no-repeat center;
+  background-size: 24px;
+  width: 30px;
+  height: 30px;
+}
+
+.current-place .more-info .temp {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  justify-content: flex-end;
+}
+
+.current-place .more-info .temp span {
+  margin: 0 10px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.current-place .more-info .temp span small {
+  font-size: 55%;
+  margin-right: 5px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+@media screen and (max-width: 992px) {
+  .current-place .more-info {
+    display: grid;
+    row-gap: 5px;
+  }
+
+  .current-place .more-info .description {
+    font-size: 18px;
+    padding: 15px 0 20px;
+  }
+
+  .current-place .more-info .humid,
+  .current-place .more-info .wind,
+  .current-place .more-info .temp {
+    margin-left: 0px;
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
+
+  .current-place .more-info .temp span {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .current-place .more-info .description {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .current-place .more-info .description span {
+    margin-bottom: 20px;
+  }
+
+  .current-place .more-info .description span+span::before {
+    content: none;
+  }
+}
+
+.current-place .city {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.current-place .city>div {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .current-place .city {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .current-place .city>div {
+    padding: 0.75rem 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .current-place .city {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.current-place .city .icon {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.current-place .city .icon.humid {
+  background: url('../assets/icons/drop.png') no-repeat center;
+  background-size: 30px;
+}
+
+.current-place .city .icon.sunrise {
+  background: url('../assets/icons/sunrise.png') no-repeat center;
+  background-size: 30px;
+}
+
+.current-place .city .icon.sunset {
+  background: url('../assets/icons/sunset.png') no-repeat center;
+  background-size: 30px;
+}
+
+.current-place .city .icon.uv {
+  background: url('../assets/icons/uv.png') no-repeat center;
+  background-size: 30px;
+}
+
+.current-place .city .icon.vis {
+  background: url('../assets/icons/visibility.png') no-repeat center;
+  background-size: 25px;
+}
+
+.current-place .city .icon.press {
+  background: url('../assets/icons/barometer.png') no-repeat center;
+  background-size: 25px;
+}
+
+.current-place .city .icon.cloud {
+  background: url('../assets/icons/clouds.png') no-repeat center;
+  background-size: 25px;
+}
+
+.current-place .city .icon.rain {
+  background: url('../assets/icons/rain.png') no-repeat center;
+  background-size: 25px;
+}
+
+.current-place .city p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+}
+
+.current-place .city p strong {
+  margin-top: 4px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  font-size: 16px;
+}
+
+.hourly-updates .header {
+  padding: 0.15rem 0;
+  margin: 1rem 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.hourly-updates .hour {
+  min-width: 80px;
+  margin: 1px;
+  padding: 1.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  transition: all 0.2s ease-in;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+}
+
+.hourly-updates .hour:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.hourly-updates .hour.dark {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hourly-updates .hour.dark:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hourly-updates .hour .time {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.hourly-updates .hour .icon {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.hourly-updates .hour .weather {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.days-7 .header {
+  padding: 0.25rem 0;
+  margin: 1rem 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.days-7 .day {
+  min-width: 150px;
+  margin: 3px;
+  padding: 1.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.days-7 .day:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.days-7 .day .name {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+}
+
+.days-7 .day .name span {
+  display: block;
+  margin-top: 8px;
+  font-size: 80%;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.days-7 .day .icon {
+  text-align: center;
+}
+
+.days-7 .day .weather {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.days-7 .day .weather span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.weather span.temp {
+  position: relative;
+  padding-left: 15px;
+}
+
+.weather span.temp.H::before {
+  content: 'H';
+  width: 15px;
+  position: absolute;
+  left: 0;
+}
+
+.weather span.temp.L::before {
+  content: 'L';
+  width: 15px;
+  position: absolute;
+  left: 0;
+}
+
+.current-place.min {
+  margin-top: 20vh;
+}
+
+@media screen and (max-width:600px) {
+  .current-place.min {
+    margin-top: 0;
+  }
+
+  .current-place .highlight {
+    margin-top: 10vh;
+    flex-direction: column;
+  }
+}
+
+.current-place.min .highlight .location {
+  opacity: 0;
+}
+
+.current-place.min .more-info .humid,
+.current-place.min .more-info .wind,
+.current-place.min .more-info .temp,
+.current-place.min .city {
+  display: none;
+}

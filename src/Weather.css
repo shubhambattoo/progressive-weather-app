@@ -1,0 +1,48 @@
+.clear-sky {
+  background-image: url('https://images.unsplash.com/photo-1583705325465-ff8377ff58bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1091&q=80');
+}
+
+
+.few-clouds {
+  background-image: url('https://images.unsplash.com/photo-1599740494531-f3f82773c136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80');
+}
+
+.scattered-clouds {
+  background-image: url('https://images.unsplash.com/photo-1581150257735-1c93ea8306ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+}
+
+.broken-clouds {
+  background-image: url('https://images.unsplash.com/photo-1495756111155-45cb19b8aeee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80');
+}
+
+.showering-rain {
+  background-image: url('https://images.unsplash.com/photo-1470432581262-e7880e8fe79a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80');
+}
+
+.heavy-rain {
+  background-image: url('https://images.unsplash.com/photo-1417008914239-59b898b49382?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1064&q=80');
+}
+
+.mist {
+  background-image: url('https://images.unsplash.com/photo-1438803235109-d737bc3129ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80');
+}
+
+.fog {
+  background-image: url('https://images.unsplash.com/photo-1479476437642-f85d89e5ad7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+}
+
+.smoke {
+  background-image: url('https://images.unsplash.com/photo-1576491742115-98d269485f16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80');
+}
+
+.thunderstorm {
+  background-image: url('https://images.unsplash.com/photo-1570550183567-c670854993a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80');
+}
+
+.tornado {
+  background-image: url('https://images.unsplash.com/flagged/photo-1557952853-89d464e66feb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1193&q=80');
+}
+
+.snowfall {
+  background-image: url('https://images.unsplash.com/photo-1593376527070-b4bcb3d24e0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80');
+}
