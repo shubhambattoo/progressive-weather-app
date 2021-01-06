@@ -4,6 +4,8 @@ A progressive weather application, built with ReactJS and [Open Weather API](htt
 
 ## [Live Preview](https://weather-reacts.netlify.app)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0001cf5f-0cc5-45f8-9e71-fd73ab63f6a0/deploy-status)](https://app.netlify.com/sites/weather-reacts/deploys)
+
 ![](./screenshots/screenshot-new.png)
 
 ## Development
