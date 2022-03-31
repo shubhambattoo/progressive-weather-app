@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useIdleTimer } from 'react-idle-timer';
 
 import Next7Days from './components/Next7Days';
